@@ -19,7 +19,7 @@ th, td {
 </style>
 <body class="grad1">
 
-	<h1>${Encabezado}</h1>
+	<h1>${Tittle}</h1>
 		<table class="datagrid">
 			<thead>
 				<tr style="background-color: #cecece">
@@ -30,12 +30,12 @@ th, td {
 				<tr>
 			</thead>
 			<tbody>
-				<c:forEach var="c" items="${clientes}">
+				<c:forEach var="b" items="${books}">
 					<tr>
-						<td>${c.stitulo}</td>
-						<td>${c.sautor}</td>
-						<td>${c.sgenero}</td>
-						<td>${c.bisbn}</td>
+						<td>${b.stitulo}</td>
+						<td>${b.sautor}</td>
+						<td>${b.sgenero}</td>
+						<td>${b.bisbn}</td>
 					</tr>
 				</c:forEach>
 			</tbody>

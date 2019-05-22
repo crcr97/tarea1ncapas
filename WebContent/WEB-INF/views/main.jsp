@@ -6,6 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+
 <title>Buscador en Libreria</title>
 <link rel="stylesheet" href="resources/css/formas.css">
 <script type="text/javascript" src="resources/jquery-1.12.3.js"></script>
@@ -14,10 +15,10 @@
 <body class="grad1">
 <script type="text/javascript">
 	function buscar(){
-		if($("#codigo").val() == ""){
+		if($("#searchVariable").val() == ""){
 			swal({
 				  title: "Error!",
-				  text: "Debe ingresar un codigo de busqueda!",
+				  text: "Debe ingresar una palabra de busqueda!",
 				  icon: "error",
 				});
 		}
@@ -26,20 +27,20 @@
 </script>
 
 	<h1>Buscador de Libros</h1>
-		<form:form id="form1" method="post" action="${pageContext.request.contextPath}/buscarcliente">
+		<form:form id="form1" method="post" action="${pageContext.request.contextPath}/searchBook">
 		<h2>M&oacute;dulo de b&uacute;squeda de Libros</h2>
 		<table cellpadding="5">
 			<tr>
-				<td><input class="inputs" type="text" id="codigo" name="codigo" placeholder="Ingrese Autor/ISBN/Genero" /></td> 
+				<td><input class="inputs" type="text" id="searchVariable" name="searchVariable" placeholder="Escriba algo para buscar" /></td> 
 			</tr>
 			<tr>
 				<td><input type="button" class="myButton" value="Buscar" onclick="buscar()" />
 				<input type="button" class="myButton" value="Ver Todos" 
-				onclick="location.href='${pageContext.request.contextPath}/vertodos'" /></td>
-				<td><select id="listaFiltro" name="listaFiltro" class="myButton"/>
-					<option value="isbn">ISBN</option>
-					<option value="genero">GENERO</option>
-					<option value="autor">AUTOR</option>
+				onclick="location.href='${pageContext.request.contextPath}/showAll'" /></td>
+				<td><select id="filter" name="filter" class="myButton"/>
+					<option value="isbn">Isbn</option>
+					<option value="genero">Genero</option>
+					<option value="autor">Autor</option>
 				</select></td>
 			</tr>
 		</table>
