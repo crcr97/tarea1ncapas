@@ -1,5 +1,6 @@
 package com.uca.capas.dao;
 
+import java.math.BigInteger;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
@@ -39,6 +40,15 @@ public class BookDAOImpl implements BookDAO {
 		Query query = entityManager.createNativeQuery(sb.toString());
 		int distinctAuthors = ((Number) query.getSingleResult()).intValue();
 		return distinctAuthors;
+	}
+	
+	@Override
+	public int totalBooks() throws DataAccessException{
+		StringBuffer sb = new StringBuffer();
+		sb.append("select sum(cantidad) from public.book");	
+		Query query = entityManager.createNativeQuery(sb.toString());
+		int totalBooks = ((Number) query.getSingleResult()).intValue();
+		return totalBooks;
 	}
 
 }

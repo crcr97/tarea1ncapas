@@ -1,5 +1,6 @@
 package com.uca.capas.dao;
 
+import java.math.BigInteger;
 import java.util.List;
 
 import org.springframework.dao.DataAccessException;
@@ -13,5 +14,7 @@ public interface BookDAO {
 	public List<Book> findBy(String filter, String searchVariable) throws DataAccessException;
 	
 	public int distinctAuthors()  throws DataAccessException;
+	
+	public int totalBooks() throws DataAccessException;
 
 }

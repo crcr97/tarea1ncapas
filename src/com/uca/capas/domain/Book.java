@@ -11,58 +11,70 @@ public class Book {
 	
 	@Id
 	@Column(name = "id")
-	private String idLibro;
+	private String bookid;
 	
 	@Column(name = "titulo")
-	private String stitulo;
+	private String booktitle;
 	
 	@Column(name = "autor")
-	private String sautor;
+	private String bookauthor;
 	
 	@Column(name = "genero")
-	private String sgenero;
+	private String bookgender;
 	
 	@Column(name = "isbn")
-	private String bisbn;
+	private String bookisbn;
+	
+	@Column(name = "cantidad")
+	private String bookquantity;
 
-	public String getidLibro() {
-		return idLibro;
+	public String getBookid() {
+		return bookid;
 	}
 
-	public void setidLibro(String idLibro) {
-		this.idLibro = idLibro;
+	public void setBookid(String bookid) {
+		this.bookid = bookid;
 	}
 
-	public String getStitulo() {
-		return stitulo;
+	public String getBooktitle() {
+		return booktitle;
 	}
 
-	public void setStitulo(String stitulo) {
-		this.stitulo = stitulo;
+	public void setBooktitle(String booktitle) {
+		this.booktitle = booktitle;
 	}
 
-	public String getSautor() {
-		return sautor;
+	public String getBookauthor() {
+		return bookauthor;
 	}
 
-	public void setSautor(String sautor) {
-		this.sautor = sautor;
+	public void setBookauthor(String bookauthor) {
+		this.bookauthor = bookauthor;
 	}
 
-	public String getSgenero() {
-		return sgenero;
+	public String getBookgender() {
+		return bookgender;
 	}
 
-	public void setSgenero(String sgenero) {
-		this.sgenero = sgenero;
+	public void setBookgender(String bookgender) {
+		this.bookgender = bookgender;
 	}
 
-	public String getBisbn() {
-		return bisbn;
+	public String getBookisbn() {
+		return bookisbn;
 	}
 
-	public void setBisbn(String bisbn) {
-		this.bisbn = bisbn;
+	public void setBookisbn(String bookisbn) {
+		this.bookisbn = bookisbn;
 	}
 
+	public String getBookquantity() {
+		return bookquantity;
+	}
+
+	public void setBookquantity(String bookquantity) {
+		this.bookquantity = bookquantity;
+	}
+
+	
 }

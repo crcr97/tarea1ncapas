@@ -31,17 +31,19 @@
 		<h2>M&oacute;dulo de b&uacute;squeda de Libros</h2>
 		<table cellpadding="5">
 			<tr>
-				<td><input class="inputs" type="text" id="searchVariable" name="searchVariable" placeholder="Escriba algo para buscar" /></td> 
+				<td><input class="inputs" type="text" id="searchVariable" name="searchVariable" placeholder="Buscar Por:" /></td> 
+			</tr>
+			<tr>
+					<td><select id="filter" name="filter" class="myButton"/>
+					<option value="autor">Autor</option>
+					<option value="isbn">Isbn</option>
+					<option value="genero">Genero</option>
+				</select></td>
 			</tr>
 			<tr>
 				<td><input type="button" class="myButton" value="Buscar" onclick="buscar()" />
 				<input type="button" class="myButton" value="Ver Todos" 
 				onclick="location.href='${pageContext.request.contextPath}/showAll'" /></td>
-				<td><select id="filter" name="filter" class="myButton"/>
-					<option value="isbn">Isbn</option>
-					<option value="genero">Genero</option>
-					<option value="autor">Autor</option>
-				</select></td>
 			</tr>
 		</table>
 		</form:form>

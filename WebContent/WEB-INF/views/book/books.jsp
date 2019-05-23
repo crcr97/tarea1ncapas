@@ -25,17 +25,19 @@ th, td {
 				<tr style="background-color: #cecece">
 					<th>Titulo</th>
 					<th>Autor</th>
-					<th>Genero</th>
 					<th>ISBN</th>
+					<th>Cantidad de existencia</th>
+					<th>Genero</th>
 				<tr>
 			</thead>
 			<tbody>
-				<c:forEach var="b" items="${books}">
+				<c:forEach var="book" items="${books}">
 					<tr>
-						<td>${b.stitulo}</td>
-						<td>${b.sautor}</td>
-						<td>${b.sgenero}</td>
-						<td>${b.bisbn}</td>
+						<td>${book.booktitle}</td>
+						<td>${book.bookauthor}</td>
+						<td>${book.bookisbn}</td>
+						<th>${book.bookquantity}</th>
+						<td>${book.bookgender}</td>
 					</tr>
 				</c:forEach>
 			</tbody>
